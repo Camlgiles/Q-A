@@ -34,6 +34,7 @@ class Signup extends React.Component {
                      type="text" 
                      value={this.state.username}
                      onChange={this.handleInput('username')}
+                     placeholder='Username'
                   />
                </label>
                <label>
@@ -42,6 +43,7 @@ class Signup extends React.Component {
                      type="text"
                      value={this.state.email}
                      onChange={this.handleInput('email')}
+                     placeholder='Email'
                   />
                </label>
                <label>
@@ -50,6 +52,7 @@ class Signup extends React.Component {
                      type="password"
                      value={this.state.password}
                      onChange={this.handleInput('password')}
+                     placeholder='Password'
                   />
                </label>
                <button onClick={this.handleSubmit}>Sign Up</button>
