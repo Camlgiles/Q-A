@@ -22,7 +22,7 @@ export const loginUser = (formUser) => dispatch => (
    SessionUtil.login(formUser).then(user => dispatch(receiveCurrentuser(user)))
 )
 
-export const logoutUser = () => (
+export const logoutUser = () => dispatch => (
    SessionUtil.logout().then(() => dispatch(logoutCurrentUser()))
 )
 

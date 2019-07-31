@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import createStore from './store/store';
-import App from './components/app';
+import Root from './components/root';
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -15,5 +15,5 @@ document.addEventListener('DOMContentLoaded', () => {
       }
    }
    const store = createStore(preloadedState);
-   ReactDOM.render(<h1>Welcome to Q&amp;A</h1>, root);
+   ReactDOM.render(<Root store={store}/>, root);
 });
