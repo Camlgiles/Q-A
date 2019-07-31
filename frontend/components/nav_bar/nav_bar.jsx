@@ -4,20 +4,20 @@ import {Link} from 'react-router-dom';
 export default ({ currentUser, logoutUser }) => {
    const display = currentUser ? 
    (
-      <div class='nav-buttons'>
-         <Link className='btn' to='/'>Home</Link>
-         <Link className='btn' to='/'>Answer</Link>
-         <Link className='btn' to='/'>Spaces</Link>
-         <Link className='btn' to='/'>Notifications</Link>  
-         <div class='nav-username'>
-            <p>Hello, {currentUser.username}</p>
-            <button onClick={logoutUser} class='nav-logout'>Log Out</button>
-         </div>
+      <div className='nav-buttons'>
+         <Link className='btn' to='/'><i className="fas fa-newspaper"></i> Home</Link>
+         <Link className='btn' to='/'><i class="far fa-edit"></i> Answer</Link>
+         <Link className='btn' to='/'><i class="fas fa-users"></i> Spaces</Link>
+         <Link className='btn' to='/'><i class="far fa-bell"></i> Notifications</Link>  
+         {/* <div className='nav-user'> */}
+            <p className='nav-profile'>{currentUser.username}</p> 
+            <button onClick={logoutUser} className='nav-logout'>Log Out</button>
+         {/* </div> */}
       </div>
    )  
       :  
    (
-      <div> 
+      <div className='nav-bar-logged-out'> 
          <Link className='btn' to='/signup'>Sign Up</Link>
          <Link className='btn' to='/login'>Log In</Link>
       </div>
@@ -35,5 +35,5 @@ export default ({ currentUser, logoutUser }) => {
 }
 
 // TODO:
-//    Add images next to all nav-bar links
+//    Add link to profile page on 'hello, username'
 //    Add correct links
