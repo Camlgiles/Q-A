@@ -1,3 +1,16 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id              :bigint           not null, primary key
+#  username        :string           not null
+#  email           :string           not null
+#  password_digest :string           not null
+#  session_token   :string           not null
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#
+
 class User < ApplicationRecord
    # This makes it so we can validate our password length, without storing it in the DB
    attr_reader :password
@@ -10,9 +23,13 @@ class User < ApplicationRecord
    # In this case, we need to have a session_token when a user is first created
    after_initialize :ensure_session_token
 
-   # has_many :questions,
+   has_many :questions,
+      foreign_key: :author_id,
+      class_name: :Question
+
+   # has_many :answers, 
    #    foreign_key: :author_id,
-   #    class_name: :Question
+   #    class_name: :Answer
 
    # has_many :comments, 
    #    foreign_key: :author_id,
