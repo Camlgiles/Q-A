@@ -1,28 +1,94 @@
-.session-form {
-   background-color: #f8f8f8;
+.sessionForm {
+   background-color: #ffffff;
    border-radius: 5px;
-   border: solid 1px #d8d8d8;
-   display: block;
-   text-align: center;
+   width: 550px;
+   height: 401px;
    margin: auto;
-   width: 30%;
+   margin-top: 50px;
+   text-align: center;
+   border: 1px solid rgb(235, 235, 235);
+}
+
+
+.session-form {
+   // display: flex;
+   display: inline-block;
+   // background-color: #f8f8f8;
+   border-radius: 5px;
+   // border: solid 1px #d8d8d8;
+   // text-align: center;
+   // margin: auto;
+   // width: 40%;
    position: relative;
-   top: 70px;
-   padding: 50px;
-   padding-top: 5px;
-   padding-bottom: 25px;
+   top: 40px;
+   // font-size: 14px;
+   // padding-top: 10px;
+   // padding-bottom: 25px;
+}
+
+
+.signup-form {
+   float: left;
+   border-right: solid 1px #d8d8d8;
+   // margin-right: 20px;
+}
+
+.login-form {
+   margin-left: 20px;
+   margin-top: -183px;
+   float: right;
+}
+
+.sessionForm-logo{
+   color: #b92b27;
+   font-size: 60px;
+   margin-top: 10px;
+   margin-bottom: 20px;
+}
+
+
+.sessionForm-text{
+   float: left;
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: 600;
+   font-size: 12px;
+}
+
+
+.sessionForm-desc {
+   color: gray;
+   font-weight: 500;
+   font-size: 16px;
+}
+
+.sessionForm-btn {
+   margin-top: 5px;
+   float: right;
+   border-radius: 4px;
+   padding: 3px;
+   background-color: rgb(75, 179, 214);
+   color: white;
+   font-weight: 600;
+} 
+
+.sessionForm-btn:hover {
+   background-color: rgb(13, 109, 187);
 }
 
 input {
    display: block;
-   width: 40.5%;
+   // width: 40.5%;
    margin: 0px auto;
-   border-radius: 5px;
+   border-radius: 4px;
+   border: solid 1px rgb(223, 223, 223);
    outline: none;
+   background-color: rgb(236, 236, 236);
+   font-size: 16px;
+   padding: 4px 3px;
+   font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
    background-image: url(//qsf.fs.quoracdn.net/-3-images.home.illo_1920.png-26-5ac607d989ef8067.png);
-   position: static;
-
+   position: sticky;
 }

@@ -24,30 +24,30 @@ class Login extends React.Component {
 
    render() {
       return (
-         <div className="session-form">
-            <h2>Log In!</h2>
-            <form>
-               <label>Username:
-                  <input 
-                     type="text"
-                     value={this.state.username}
-                     onChange={this.handleInput('username')} 
-                     placeholder='Username'
-                  />
-               </label>
-
-               <label>Password:
-                  <input  
-                     type="password"
-                     value={this.state.password}
-                     onChange={this.handleInput('password')} 
-                     placeholder='Password'
-                  />
-
-               </label>
-               <br/>
-               <button onClick={this.handleSubmit}>Log In!</button>
-            </form>
+         <div  className="session-form">
+            <div className="login-form">
+               <form>
+                  <label>
+               <p className="sessionForm-text">Login</p>
+                     <input 
+                        type="text"
+                        value={this.state.username}
+                        onChange={this.handleInput('username')} 
+                        placeholder='Username'
+                     />
+                  </label>
+                  <br/>
+                  <label>
+                     <input  
+                        type="password"
+                        value={this.state.password}
+                        onChange={this.handleInput('password')} 
+                        placeholder='Password'
+                     />
+                  </label>
+                  <button onClick={this.handleSubmit} className="sessionForm-btn">Login</button>
+               </form>
+            </div>
          </div>
       )
    }
