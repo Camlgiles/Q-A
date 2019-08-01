@@ -7,7 +7,6 @@ class Login extends React.Component {
          username: "",
          password: "",
       };
-
       this.handleSubmit = this.handleSubmit.bind(this);
    }
 
@@ -45,8 +44,9 @@ class Login extends React.Component {
                      placeholder='Password'
                   />
 
-                  <button onClick={this.handleSubmit}>Log In!</button>
                </label>
+               <br/>
+               <button onClick={this.handleSubmit}>Log In!</button>
             </form>
          </div>
       )

@@ -1,15 +1,28 @@
 .session-form {
-   background-color: #f5f5f5;
-   border-radius: 20px;
+   background-color: #f8f8f8;
+   border-radius: 5px;
+   border: solid 1px #d8d8d8;
    display: block;
    text-align: center;
    margin: auto;
-   width: 40%;
+   width: 30%;
+   position: relative;
+   top: 70px;
+   padding: 50px;
+   padding-top: 5px;
+   padding-bottom: 25px;
 }
 
 input {
    display: block;
-   width: 98.5%;
+   width: 40.5%;
+   margin: 0px auto;
    border-radius: 5px;
    outline: none;
+}
+
+body {
+   background-image: url(//qsf.fs.quoracdn.net/-3-images.home.illo_1920.png-26-5ac607d989ef8067.png);
+   position: static;
+
 }

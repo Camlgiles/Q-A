@@ -55,6 +55,7 @@ class Signup extends React.Component {
                      placeholder='Password'
                   />
                </label>
+               <br/>
                <button onClick={this.handleSubmit}>Sign Up</button>
             </form>
          </div>
