@@ -4,6 +4,7 @@
    justify-content: center;
    background:  white;
    border-bottom: 1px solid lightgrey;
+   // width: 700px;
 }
 
 .nav-bar-logged-out {
@@ -18,7 +19,8 @@
 .logo {
    color: #b92b27;
    padding: 0px 20px;
-   margin: 5px 0px 5px 0px;
+   margin: 14px 0px 5px 0px;
+   font-size: 24px;
 }
 
 .fas {
@@ -33,7 +35,6 @@
    color: grey;
    background-color: white;
    padding: 23px 20px 14px 20px;
-   // margin: 10px;
    text-decoration: none;
 }
 

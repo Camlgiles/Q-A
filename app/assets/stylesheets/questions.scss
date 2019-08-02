@@ -3,10 +3,20 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+
 .questions-index {
    background-color: white;
-   padding: 30px;
-   font-size: 48px;
+   padding: 5px 30px;
+   font-size: 20px;
+   list-style-type: none;
+   border-radius: 3px;
+   border: 1px solid lightgray;
+   font-weight: 600;
+   width: 60%;
+   margin: auto;
+   margin-bottom: 30px;
+}
+
+.questions-index-links{
    text-decoration: none;
-   outline: none;
 }
