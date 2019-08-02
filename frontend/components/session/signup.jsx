@@ -12,6 +12,14 @@ class Signup extends React.Component {
       this.handleSubmit = this.handleSubmit.bind(this);
    }
 
+   componentDidMount() {
+      document.body.classList.add('background');
+   }
+
+   componentWillUnmount() {
+      document.body.classList.remove('background')
+   }
+
    handleInput(type) {
       return (e) => {
          this.setState({[type]: e.target.value})

@@ -8,6 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
    const root = document.getElementById('root');
    let preloadedState = undefined;
    if (window.currentUser) {
+      // debugger
+      // document.getElementsByClassName('background')[0].classList.remove('background');
       preloadedState = {
          session: {
             currentUser: window.currentUser

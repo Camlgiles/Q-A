@@ -4,5 +4,6 @@ import questionsReducer from './questions_reducer';
 
 
 export default combineReducers({
-   questions: questionsReducer
+   questions: questionsReducer,
+   user: userReducer
 });

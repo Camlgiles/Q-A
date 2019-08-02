@@ -18,8 +18,8 @@ export default ({ currentUser, logoutUser }) => {
       :  
    (
       <div className='nav-bar-logged-out'> 
-         <Link className='btn' to='/signup'>Sign Up</Link>
-         <Link className='btn' to='/login'>Log In</Link>
+         <Link className='btn' to='/'>Sign Up</Link>
+         <Link className='btn' to='/'>Log In</Link>
       </div>
    );
 

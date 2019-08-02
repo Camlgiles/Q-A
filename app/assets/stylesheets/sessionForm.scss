@@ -36,7 +36,7 @@
 
 .login-form {
    margin-left: 20px;
-   margin-top: -183px;
+   margin-top: -162px;
    float: right;
 }
 
@@ -89,7 +89,14 @@ input {
    font-family: Arial, Helvetica, sans-serif;
 }
 
-body {
+// body {
+//    background-image: url(//qsf.fs.quoracdn.net/-3-images.home.illo_1920.png-26-5ac607d989ef8067.png);
+//    position: sticky;
+// }
+
+.background{
    background-image: url(//qsf.fs.quoracdn.net/-3-images.home.illo_1920.png-26-5ac607d989ef8067.png);
    position: sticky;
 }
+
+

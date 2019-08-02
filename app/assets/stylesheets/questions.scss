@@ -6,17 +6,27 @@
 
 .questions-index {
    background-color: white;
-   padding: 5px 30px;
-   font-size: 20px;
+   padding: 15px 20px 15px 20px;
+   font-size: 18px;
    list-style-type: none;
    border-radius: 3px;
    border: 1px solid lightgray;
    font-weight: 600;
    width: 60%;
    margin: auto;
-   margin-bottom: 30px;
+   margin-top: 30px;
+   // margin-bottom: 30px;
 }
 
+// .questions-index:first-child{
+//    margin-top: ;
+// }
+
 .questions-index-links{
+   color: black;
    text-decoration: none;
+}
+
+.questions-index-links:hover{
+   text-decoration: underline;
 }
