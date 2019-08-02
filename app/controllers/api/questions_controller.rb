@@ -4,9 +4,9 @@ class Api::QuestionsController < ApplicationController
       @question = Question.new(question_params)
       @question.author_id = current_user.id
       if @question.save
-         render json: {'Successful'}
+         render json: 'Successful'
       else
-         render json: @question.errors.full_messages, status 422
+         render json: @question.errors.full_messages, status: 422
       end
    end
 
@@ -15,7 +15,7 @@ class Api::QuestionsController < ApplicationController
       if @question
          render :show
       else
-         render json: @question.errors.full_messages, status 404
+         render json: @question.errors.full_messages, status: 404
       end
    end
 
@@ -25,7 +25,7 @@ class Api::QuestionsController < ApplicationController
                   else
                      render json: Question.all
                   end
-      render :index
+      return @questions
    end
 
    def edit
@@ -36,7 +36,7 @@ class Api::QuestionsController < ApplicationController
   def update
     @question = Question.find(params[:id])
     if @question.update(question_params)
-      render json: {'successful'}
+      render json: 'successful'
     else
       render json: @question.errors.full_messages, status: 422
     end
@@ -45,7 +45,7 @@ class Api::QuestionsController < ApplicationController
   def destroy
     @question = Question.find(params[:id])
     if @question.destroy
-      render json: {'successful'}
+      render json: 'successful'
     else
       render plain: "You can't destroy what's not there."
     end

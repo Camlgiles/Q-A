@@ -19,22 +19,22 @@ const removeQuestion = (question) => ({
    type: REMOVE_QUESTION
 })
 
-export const requestEvents = () => dispatch => (
+export const requestQuestions = () => dispatch => (
    QuestionUtil.fetchQuestions().then(questions => dispatch(receiveQuestions(questions)))
 )
 
-export const requestEvent = (id) => dispatch => (
+export const requestQuestion = (id) => dispatch => (
    QuestionUtil.fetchQuestion(id).then(question => dispatch(receiveQuestion(question)))
 )
 
-export const createEvent = (question) => dispatch => (
+export const createQuestion = (question) => dispatch => (
    QuestionUtil.createQuestion(question).then(question => dispatch(receiveQuestion(question)))
 )
 
-export const updateEvent = (question) => dispatch => (
+export const updateQuestion = (question) => dispatch => (
    QuestionUtil.updateQuestion(question).then(question => dispatch(receiveQuestion(question)))
 )
 
-export const deleteEvent = (id) => dispatch => (
+export const deleteQuestion = (id) => dispatch => (
    QuestionUtil.deleteQuestion(id).then(question => dispatch(removeQuestion(question)))
 )
