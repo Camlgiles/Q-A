@@ -20,12 +20,12 @@ class Api::QuestionsController < ApplicationController
    end
 
    def index
-      @questions = if params[:user_id]
-                     render json: Question.where(author_id: params[:user_id])
-                  else
-                     render json: Question.all
-                  end
-      return @questions
+      # @questions = if params[:user_id]
+      #                render json: Question.where(author_id: params[:user_id])
+      #             else
+      #                render json: Question.all
+      #             end
+      @questions = Question.all.includes(:author)
    end
 
    def edit

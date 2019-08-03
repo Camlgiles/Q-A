@@ -8,7 +8,7 @@ const mstp = state => {
    // debugger;
    return ({
       questions: Object.values(state.entities.questions),
-      author: selectQuestionAuthor(state)
+      author: Object.values(state.entities.user)
    })
 }
 
@@ -20,3 +20,4 @@ const mdtp = dispatch => {
 }
 
 export default connect(mstp, mdtp)(QuestionIndex);
+
