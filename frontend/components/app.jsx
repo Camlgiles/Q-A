@@ -12,7 +12,7 @@ import sessionForm from './session/sessionForm';
 import QuestionIndexContainer from './questions/question_index_container';
 
 export default () => (
-   <div id='background'>
+   <div>
       {/* <Switch> */}
       <AuthRoute exact path='/' component={sessionForm} />
       <ProtectedRoute path='/' component={NavBarContainer} />

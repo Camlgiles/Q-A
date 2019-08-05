@@ -5,9 +5,9 @@ export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
 export const LOGOUT_CURRENT_USER = 'LOGOUT_CURRENT_USER';
 
 
-const receiveCurrentuser = (user) => ({
+const receiveCurrentuser = (currentUser) => ({
    type: RECEIVE_CURRENT_USER,
-   user: user
+   currentUser: currentUser
 })
 
 const logoutCurrentUser = () => ({

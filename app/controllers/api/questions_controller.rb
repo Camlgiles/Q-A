@@ -29,31 +29,30 @@ class Api::QuestionsController < ApplicationController
    end
 
    def edit
-    @question = Question.find(params[:id])
-    render :edit
-  end
+      @question = Question.find(params[:id])
+      render :edit
+   end
 
   def update
-    @question = Question.find(params[:id])
-    if @question.update(question_params)
-      render json: 'successful'
-    else
-      render json: @question.errors.full_messages, status: 422
-    end
-  end
+      @question = Question.find(params[:id])
+      if @question.update(question_params)
+         render json: 'successful'
+      else
+         render json: @question.errors.full_messages, status: 422
+      end
+   end
 
   def destroy
-    @question = Question.find(params[:id])
-    if @question.destroy
-      render json: 'successful'
-    else
-      render plain: "You can't destroy what's not there."
-    end
-  end
+      @question = Question.find(params[:id])
+      if @question.destroy
+         render json: 'successful'
+      else
+         render plain: "You can't destroy what's not there."
+      end
+   end
 
 
    private
-
    def question_params
       params.require(:question).permit(:body, :author_id)
    end

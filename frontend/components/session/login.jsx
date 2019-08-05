@@ -20,13 +20,11 @@ class Login extends React.Component {
    handleSubmit(e) {
       e.preventDefault();
       this.props.login(this.state);
-         // .then(() => this.props.history.push('/'));
    }
 
    demoLogin(e) {
       e.preventDefault();
       this.props.login({username: '123456', password: '123456'});
-         // .then(() => this.props.history.push('/'));
    }
 
    render() {

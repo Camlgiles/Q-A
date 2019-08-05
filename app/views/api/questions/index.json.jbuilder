@@ -3,14 +3,12 @@
 # end
 
 @questions.each do |question| 
-   json.questions do
       json.set! question.id do
          json.extract! question, :id, :body, :author_id
       end
-   end
-   json.authors do
-      json.set! question.author.id do
-         json.extract! question.author, :id, :username
-      end
-   end
+   
+      # json.set! question.author.id do
+      #    json.extract! question.author, :id, :username
+      # end
 end
+
