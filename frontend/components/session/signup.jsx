@@ -31,6 +31,7 @@ class Signup extends React.Component {
       this.props.createNewUser(this.state).then(() => this.props.history.push('/'))
    }
 
+
    render () {
       return (
          <div className="session-form">

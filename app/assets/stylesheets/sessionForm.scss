@@ -26,6 +26,11 @@
    // padding-bottom: 25px;
 }
 
+.sessionForm-errors {
+   list-style-type: none;
+   font-size: 10px;
+}
+
 
 .signup-form {
    float: left;
@@ -53,6 +58,7 @@
    font-family: Arial, Helvetica, sans-serif;
    font-weight: 600;
    font-size: 12px;
+   margin-bottom: 2px;
 }
 
 
@@ -84,8 +90,8 @@ input {
    border: solid 1px rgb(223, 223, 223);
    outline: none;
    background-color: rgb(236, 236, 236);
-   font-size: 16px;
-   padding: 4px 3px;
+   font-size: 15px;
+   padding: 4px 7px;
    font-family: Arial, Helvetica, sans-serif;
 }
 

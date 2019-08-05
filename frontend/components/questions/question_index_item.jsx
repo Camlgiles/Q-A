@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 
 
 const QuestionIndexItem = ({ question, author, deleteQuestion }) => {
-   // debugger
    return (
    <li className="questions-index">
       <Link className='questions-index-links' to={`/questions/${question.id}`}>{question.body}</Link>

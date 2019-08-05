@@ -24,22 +24,39 @@ class Login extends React.Component {
 
    demoLogin(e) {
       e.preventDefault();
-      this.props.login({username: '123456', password: '123456'});
+      this.props.login({username: 'DemoUser', password: '123456'});
    }
 
+   renderErrors() {
+      if (this.props.errors) {
+         return (
+            <ul className="sessionForm-errors">
+               {/* {this.props.errors.errors.map((error, i) => (
+                  <li key={`error-${i}`}>
+                     {error}
+                  </li>
+               ))} */}
+               <li>{this.props.errors.errors}</li>
+            </ul>
+         )
+      }
+   }
+   
    render() {
       return (
          <div  className="session-form">
             <div className="login-form">
+         {this.renderErrors()}
+               <p className="sessionForm-text">Login</p>
+               <br/>
                <form>
                   <label>
-               <p className="sessionForm-text">Login</p>
                      <input 
                         type="text"
                         value={this.state.username}
                         onChange={this.handleInput('username')} 
                         placeholder='Username'
-                     />
+                        />
                   </label>
                   <br/>
                   <label>
@@ -48,7 +65,7 @@ class Login extends React.Component {
                         value={this.state.password}
                         onChange={this.handleInput('password')} 
                         placeholder='Password'
-                     />
+                        />
                   </label>
                   <button onClick={this.handleSubmit} className="sessionForm-btn">Login</button>
                </form>
