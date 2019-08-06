@@ -17,10 +17,11 @@ class QuestionIndex extends React.Component {
             deleteQuestion={this.props.deleteQuestion}
          />
       ))
+      // debugger
       return (
          <div>
                <div className="ask-question">
-                  <Link className="ask-question-username" to="/">{currentUser.username}</Link>
+                  <Link className="ask-question-username" to="/">{this.props.currentUser.username}</Link>
                   <br/>
                   <Link className="ask-question-info" to='/'>Ask a question</Link>
                </div>
