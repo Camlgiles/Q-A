@@ -34,6 +34,7 @@
    width: 60%;
    margin: auto;
    margin-top: 30px;
+   padding-bottom: 30px;
 }
 
 .ask-question-username{
@@ -74,4 +75,20 @@
 
 .question-index-author{
    font-size: 12px;
+}
+
+
+.ask-question-btn {
+   margin-top: 5px;
+   margin-right: -10px;
+   float: right;
+   border-radius: 4px;
+   padding: 3px;
+   background-color: rgb(75, 179, 214);
+   color: white;
+   font-weight: 600;
+} 
+
+.ask-question-btn:hover {
+   background-color: rgb(13, 109, 187);
 }

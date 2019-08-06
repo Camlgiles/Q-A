@@ -12,7 +12,7 @@
 
    
      # json.set! question.author.id do
-     #    json.extract! question.author, :id, :username
-     # end
+   #     json.extract! question.author, :id, :username
+      #end
 end
 

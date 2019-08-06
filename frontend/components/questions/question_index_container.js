@@ -1,5 +1,5 @@
 import {connect} from 'react-redux';
-import { requestQuestions, deleteQuestion } from '../../actions/questions';
+import { requestQuestions, deleteQuestion, createQuestion } from '../../actions/questions';
 import QuestionIndex from './question_index';
 import {selectQuestionAuthor} from '../../reducers/selectors';
 
@@ -15,6 +15,7 @@ const mstp = state => {
 
 const mdtp = dispatch => {
    return ({
+      createQuestion: (question) => dispatch(createQuestion(question)),
       requestQuestions: () => dispatch(requestQuestions()),
       deleteQuestion: (id) => dispatch(deleteQuestion(id))
    })

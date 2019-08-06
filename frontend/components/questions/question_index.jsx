@@ -4,15 +4,35 @@ import { Link } from 'react-router-dom';
 
 
 class QuestionIndex extends React.Component {
+   constructor(props) {
+      super(props);
+      // debugger
+      this.state = {
+         body:"",
+         author: this.props.currentUser.id,
+      }
+      this.handleSubmit = this.handleSubmit.bind(this);
+   }
 
    componentDidMount() {
       this.props.requestQuestions();
    }
 
+   handleInput(type) {
+      return (e) => {
+         this.setState({ [type]: e.target.value })
+      }
+   }
+
+   handleSubmit(e) {
+      e.preventDefault();
+      this.props.createQuestion(this.state);
+   }
+
    render() {
-      let questions = this.props.questions.map(question => (
+      let questions = this.props.questions.map((question, i) => (
          <QuestionIndexItem 
-            key={question.body}
+            key={question.body + i}
             question={question}
             deleteQuestion={this.props.deleteQuestion}
          />
@@ -24,8 +44,15 @@ class QuestionIndex extends React.Component {
                   <form>
                      <Link className="ask-question-username" to="/">{this.props.currentUser.username}</Link>
                      <br/>
-                     <input className="ask-question-input" type="text" placeholder="Ask a question"/>
-                     <input type="submit"/>
+                     <input 
+                        onChange={this.handleInput('body')} className="ask-question-input" 
+                        type="text" placeholder="Ask a question"
+                     />
+                     <button 
+                        onClick={this.handleSubmit} 
+                        className="ask-question-btn">
+                        Post Question
+                     </button>
                   </form>  
                </div>
             <ul>

@@ -27,15 +27,7 @@ class Login extends React.Component {
       this.props.login({username: 'DemoUser', password: '123456'});
    }
 
-   // renderErrors() {
-   //    if (this.props.errors) {
-   //       return (
-   //          <ul className="sessionForm-errors">
-   //             <li>{this.props.errors.errors}</li>
-   //          </ul>
-   //       )
-   //    }
-   // }
+
    
    render() {
       return (
