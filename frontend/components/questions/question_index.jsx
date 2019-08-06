@@ -19,6 +19,11 @@ class QuestionIndex extends React.Component {
       ))
       return (
          <div>
+               <div className="ask-question">
+                  <Link className="ask-question-username" to="/">{currentUser.username}</Link>
+                  <br/>
+                  <Link className="ask-question-info" to='/'>Ask a question</Link>
+               </div>
             <ul>
                {questions}
             </ul>

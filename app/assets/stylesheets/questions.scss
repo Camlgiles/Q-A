@@ -22,6 +22,40 @@
 //    margin-top: ;
 // }
 
+.ask-question{
+   background-color: white;
+   color: gray;
+   padding: 15px 20px 15px 20px;
+   font-size: 18px;
+   list-style-type: none;
+   border-radius: 4px;
+   border: 1px solid lightgray;
+   font-weight: 600;
+   width: 60%;
+   margin: auto;
+   margin-top: 30px;
+}
+
+.ask-question-username{
+   font-family: 'Times New Roman', Times, serif;
+   font-size: 14px;
+   text-decoration: none;
+   color: gray;
+}
+
+.ask-question-username:hover {
+   text-decoration: underline;
+}
+
+.ask-question-info{
+   text-decoration: none;
+   color: gray;
+}
+
+.ask-question-info:hover{
+   color: blue;
+}
+
 .questions-index-links{
    color: black;
    text-decoration: none;
