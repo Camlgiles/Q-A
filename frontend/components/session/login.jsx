@@ -27,26 +27,21 @@ class Login extends React.Component {
       this.props.login({username: 'DemoUser', password: '123456'});
    }
 
-   renderErrors() {
-      if (this.props.errors) {
-         return (
-            <ul className="sessionForm-errors">
-               {/* {this.props.errors.errors.map((error, i) => (
-                  <li key={`error-${i}`}>
-                     {error}
-                  </li>
-               ))} */}
-               <li>{this.props.errors.errors}</li>
-            </ul>
-         )
-      }
-   }
+   // renderErrors() {
+   //    if (this.props.errors) {
+   //       return (
+   //          <ul className="sessionForm-errors">
+   //             <li>{this.props.errors.errors}</li>
+   //          </ul>
+   //       )
+   //    }
+   // }
    
    render() {
       return (
          <div  className="session-form">
             <div className="login-form">
-         {this.renderErrors()}
+         {/* {this.renderErrors()} */}
                <p className="sessionForm-text">Login</p>
                <br/>
                <form>

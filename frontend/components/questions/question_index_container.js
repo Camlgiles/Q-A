@@ -8,7 +8,7 @@ const mstp = state => {
    // debugger
    return ({
       questions: Object.values(state.entities.questions),
-      author: Object.values(state.entities.user),
+      // author: Object.values(state.entities.user),
       currentUser: state.session.currentUser
    })
 }
