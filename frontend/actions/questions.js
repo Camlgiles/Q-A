@@ -4,8 +4,9 @@ export const RECEIVE_QUESTIONS = 'RECEIVE_QUESTIONS';
 export const RECEIVE_QUESTION = 'RECEIVE_QUESTION';
 export const REMOVE_QUESTION = 'REMOVE_QUESTION';
 
-const receiveQuestions = (questions) => ({
-   questions: questions,
+const receiveQuestions = (payload) => ({
+   questions: payload.questions,
+   answers: payload.answers,
    type: RECEIVE_QUESTIONS
 })
 
@@ -20,7 +21,7 @@ const removeQuestion = (question) => ({
 })
 
 export const requestQuestions = () => dispatch => (
-   QuestionUtil.fetchQuestions().then(questions => dispatch(receiveQuestions(questions)))
+   QuestionUtil.fetchQuestions().then(payload => dispatch(receiveQuestions(payload)))
 )
 
 export const requestQuestion = (id) => dispatch => (

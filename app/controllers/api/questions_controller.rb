@@ -20,7 +20,7 @@ class Api::QuestionsController < ApplicationController
    end
 
    def index
-      @questions = Question.all.includes(:author)
+      @questions = Question.all.includes(:author, :answers)
    end
 
    def edit
@@ -31,7 +31,7 @@ class Api::QuestionsController < ApplicationController
   def update
       @question = Question.find(params[:id])
       if @question.update(question_params)
-         render json: ['successful']
+         render :show
       else
          render json: @question.errors.full_messages, status: 422
       end
@@ -40,7 +40,7 @@ class Api::QuestionsController < ApplicationController
   def destroy
       @question = Question.find(params[:id])
       if @question.destroy
-         render json: ['successful']
+         render :show
       else
          render plain: "You can't destroy what's not there."
       end

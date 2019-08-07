@@ -4,7 +4,7 @@ class Api::AnswersController < ApplicationController
       @answer = Answer.new(answer_params)
       @answer.author_id = current_user.id
       if @answer.save
-         render json: 'Successful'
+         render :show
       else
          render json: @answer.errors.full_messages, status: 422
       end
@@ -31,7 +31,7 @@ class Api::AnswersController < ApplicationController
   def update
       @answer = Answer.find(params[:id])
       if @answer.update(answer_params)
-         render json: 'successful'
+         render :show
       else
          render json: @answer.errors.full_messages, status: 422
       end
@@ -40,7 +40,7 @@ class Api::AnswersController < ApplicationController
   def destroy
       @answer = Answer.find(params[:id])
       if @answer.destroy
-         render json: 'successful'
+         render :show
       else
          render plain: "You can't destroy what's not there."
       end

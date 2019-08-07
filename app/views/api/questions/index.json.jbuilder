@@ -2,17 +2,26 @@
 #    json.extract! question, :id, :body, :author_id, :author
 # end
 
-@questions.each do |question| 
-      json.set! question.id do
-            json.extract! question, :id, :body, :author_id
+json.questions do
+  @questions.each do |question| 
+    json.set! question.id do
+      json.extract! question, :id, :body, :author_id
 
-            json.author question.author.username
-
-      end
-
-   
-     # json.set! question.author.id do
-   #     json.extract! question.author, :id, :username
-      #end
+      json.author question.author.username
+      json.answerIds question.answer_ids
+    end
+  end
 end
 
+json.answers do
+  @questions.each do |question|
+    question.answers.each do |answer|
+      json.set! answer.id do 
+        json.extract! answer, :id, :body, :author_id, :question_id
+
+        json.author answer.author.username
+        json.question answer.question.body
+      end
+    end
+  end
+end
