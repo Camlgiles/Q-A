@@ -1,3 +1,27 @@
 // Place all the styles related to the Answers controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.answer{
+   font-weight: 400;
+}
+
+.answer-body{
+   font-size: 14px;
+}
+
+.answer-author{
+   font-size: 10px;
+   border-bottom: solid 1px rgb(124, 124, 124);
+}
+
+.create-answer-link {
+   text-decoration: none;
+   font-size: 14px;
+   color: #4bb3d6;
+}
+
+.create-answer-link:hover {
+   text-decoration: underline;
+}

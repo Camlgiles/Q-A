@@ -33,11 +33,13 @@ class QuestionIndex extends React.Component {
    render() {
       // console.log(this.props);
       // debugger
+      let answers = this.props.answers;
 
       let questions = this.props.questions.map((question, i) => (
          <QuestionIndexItem 
             key={`${question.id}`}
             question={question}
+            answersObj={answers}
          />
       ))
       // debugger
