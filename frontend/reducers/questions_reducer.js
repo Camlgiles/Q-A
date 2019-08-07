@@ -7,11 +7,13 @@ import merge from 'lodash/merge';
 
 
 const questionsReducer = (state = {}, action) => {
+   // debugger
    Object.freeze(state);
    let newState;
    switch (action.type) {
       case RECEIVE_QUESTIONS:
-         return action.questions;
+         newState = merge({}, state, action.questions);
+         return newState;
       case RECEIVE_QUESTION:
          newState = merge({}, state, {[action.question.id]: action.question});
          return newState;

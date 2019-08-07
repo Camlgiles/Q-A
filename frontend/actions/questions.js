@@ -4,14 +4,17 @@ export const RECEIVE_QUESTIONS = 'RECEIVE_QUESTIONS';
 export const RECEIVE_QUESTION = 'RECEIVE_QUESTION';
 export const REMOVE_QUESTION = 'REMOVE_QUESTION';
 
-const receiveQuestions = (payload) => ({
+const receiveQuestions = (payload) => {
+   // debugger 
+   return ({
    questions: payload.questions,
    answers: payload.answers,
    type: RECEIVE_QUESTIONS
-})
+}) }
 
-const receiveQuestion = (question) => ({
-   question: question,
+const receiveQuestion = (payload) => ({
+   question: payload.question,
+   answers: payload.answers,
    type: RECEIVE_QUESTION
 })
 
@@ -25,7 +28,7 @@ export const requestQuestions = () => dispatch => (
 )
 
 export const requestQuestion = (id) => dispatch => (
-   QuestionUtil.fetchQuestion(id).then(question => dispatch(receiveQuestion(question)))
+   QuestionUtil.fetchQuestion(id).then(payload => dispatch(receiveQuestion(payload)))
 )
 
 export const createQuestion = (question) => dispatch => (

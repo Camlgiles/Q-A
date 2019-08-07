@@ -7,6 +7,7 @@ class QuestionIndex extends React.Component {
    constructor(props) {
       super(props);
       // debugger
+      // console.log(this.props);
       this.state = {
          body:"",
          author: this.props.currentUser.id,
@@ -30,11 +31,13 @@ class QuestionIndex extends React.Component {
    }
 
    render() {
+      // console.log(this.props);
+      // debugger
+
       let questions = this.props.questions.map((question, i) => (
          <QuestionIndexItem 
-            key={question.body + i}
+            key={`${question.id}`}
             question={question}
-            deleteQuestion={this.props.deleteQuestion}
          />
       ))
       // debugger

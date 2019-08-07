@@ -4,16 +4,17 @@ import {
    REMOVE_ANSWER
 } from '../actions/answers';
 import merge from 'lodash/merge';
-import { RECEIVE_QUESTIONS } from '../actions/questions';
+import { RECEIVE_QUESTIONS, RECEIVE_QUESTION } from '../actions/questions';
 
 
 const answersReducer = (state={}, action) => {
+   // debugger
    Object.freeze(state);
    let newState;
    switch (action.type) {
-      case RECEIVE_ANSWERS:
+      case RECEIVE_QUESTION:
       case RECEIVE_QUESTIONS:
-         return action.answers;
+         return merge({}, state, action.answers);
       case RECEIVE_ANSWER:
          newState = merge({}, state, {[action.answer.id]: action.answer});
          return newState;
