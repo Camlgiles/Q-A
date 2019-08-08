@@ -1,5 +1,5 @@
 import React from 'react';
-import QuestionIndexItem from './question_index_item';
+import {QuestionIndexItem} from './question_index_item';
 import { Link } from 'react-router-dom';
 
 

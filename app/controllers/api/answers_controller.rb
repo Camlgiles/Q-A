@@ -1,6 +1,7 @@
 class Api::AnswersController < ApplicationController
       
    def create
+      # debugger
       @answer = Answer.new(answer_params)
       @answer.author_id = current_user.id
       if @answer.save

@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+// createTextbox = () => {
+//    debugger
+// }
 
-
-const QuestionIndexItem = ({ question, answersObj  }) => {
+export const QuestionIndexItem = ({ question, answersObj  }) => {
    // debugger
    let answers;
    if (answersObj) {
@@ -30,8 +32,6 @@ const QuestionIndexItem = ({ question, answersObj  }) => {
             <br/>
             {answers}
             <br/>
-            <Link className='create-answer-link' to='/home'>Answer this quesiton</Link>
+            <Link className='create-answer-link' to={`/questions/${question.id}`}>Answer this question</Link>
          </li>
 )};
-
-export default QuestionIndexItem;

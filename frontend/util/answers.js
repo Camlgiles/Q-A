@@ -21,6 +21,7 @@ export const deleteAnswer = (id) => {
 }
 
 export const createAnswer = (answer) => {
+   // debugger
    return $.ajax({
       method: 'post',
       url: '/api/answers',

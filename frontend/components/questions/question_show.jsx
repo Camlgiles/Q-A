@@ -10,20 +10,23 @@ class QuestionShow extends React.Component {
          showResults: false,
          answerThisQuesiton: true, 
          body:"", 
-         author_id: this.props.currentUser.id, 
-         question_id: this.props.questionId
+         author_id: this.props.currentUser.id
       };
-      this.handleSubmit = this.handleSubmit.bind(this)
+      this.handleSubmit = this.handleSubmit.bind(this);
+      this.createTextbox = this.createTextbox.bind(this);
+   }
+
+   componentDidMount() {
+      this.props.requestQuestion(this.props.match.params.questionId)
    }
 
    handleSubmit(e) {
       // debugger
       e.preventDefault();
-      // this.props.createAnswer(this.state);
       this.props.createAnswer({
          body: this.state.body,
          author_id: this.state.author_id,
-         question_id: this.state.question_id
+         question_id: this.props.question.id
       });
    }
 
@@ -36,8 +39,9 @@ class QuestionShow extends React.Component {
    }
 
    createTextbox() {
-      this.state.showResults ? this.setState.showResults = false : this.setState.showResults = true;
-      this.state.answerThisQuesiton ? this.setState.answerThisQuesiton = false : this.setState.answerThisQuesiton = true;
+      // debugger
+      this.state.showResults ? this.setState({showResults:false}) : this.setState({showResults: true});
+      this.state.answerThisQuesiton ? this.setState({answerThisQuesiton: false}) : this.setState({answerThisQuesiton: true});
    }
 
    render() {
@@ -70,7 +74,7 @@ class QuestionShow extends React.Component {
                <br />
                {answers}
                <br />
-               { this.setState.showResults ? 
+               { this.state.showResults ? 
                   <form>
                      <textarea onChange={this.handleInput('body')} type="text" className='answer-input' placeholder='Answer goes here..'/>
                      <br/>
@@ -78,7 +82,7 @@ class QuestionShow extends React.Component {
                   </form> 
                   : '' 
                }
-               <Link onClick={this.createTextbox()} className='create-answer-link'>{this.state.answerThisQuesiton ? 'Answer this question' : 'Cancel'}</Link>
+               <button onClick={this.createTextbox} className='create-answer-link'>{this.state.answerThisQuesiton ? 'Answer this question' : 'Cancel'}</button>
             </li>
          </ul>
       )
