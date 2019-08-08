@@ -47,7 +47,7 @@ class QuestionIndex extends React.Component {
          <div>
                <div className="ask-question">
                   <form>
-                     <Link className="ask-question-username" to="/">{this.props.currentUser.username}</Link>
+                     <Link className="ask-question-username" to='/'>{this.props.currentUser.username}</Link>
                      <br/>
                      <input 
                         onChange={this.handleInput('body')} className="ask-question-input" 

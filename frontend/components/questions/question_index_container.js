@@ -12,7 +12,6 @@ const mstp = state => {
       currentUser: state.session.currentUser,
       answers: Object.values(state.entities.answers)
    })
-
 }
 
 const mdtp = dispatch => {

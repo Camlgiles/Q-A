@@ -30,7 +30,7 @@ const QuestionIndexItem = ({ question, answersObj  }) => {
             <br/>
             {answers}
             <br/>
-            <Link className='create-answer-link' to='/'>Add a Response</Link>
+            <Link className='create-answer-link' to='/home'>Add a Response</Link>
          </li>
 )};
 
