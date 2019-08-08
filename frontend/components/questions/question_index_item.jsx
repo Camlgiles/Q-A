@@ -25,12 +25,12 @@ const QuestionIndexItem = ({ question, answersObj  }) => {
    return (
          <li className="questions-index">
             <Link className='questions-index-links' to={`/questions/${question.id}`}>{question.body}</Link>
-            <h2 className="question-index-author">{question.author}</h2>
-            <div className='questin-index-border'></div>
+            <h2 className="questions-index-author">{question.author}</h2>
+            <div className='questions-index-border'></div>
             <br/>
             {answers}
             <br/>
-            <Link className='create-answer-link' to='/home'>Add a Response</Link>
+            <Link className='create-answer-link' to='/home'>Answer this quesiton</Link>
          </li>
 )};
 

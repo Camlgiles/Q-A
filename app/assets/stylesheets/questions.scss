@@ -22,6 +22,11 @@
 //    margin-top: ;
 // }
 
+.answer-input{
+   width: 100%;
+   
+}
+
 .ask-question{
    background-color: white;
    color: gray;
@@ -74,11 +79,11 @@
    text-decoration: underline;
 }
 
-.question-index-author{
+.questions-index-author{
    font-size: 12px;
 }
 
-.questin-index-border{
+.questions-index-border{
    border-bottom: solid 1px black;
 }
 

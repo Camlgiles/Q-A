@@ -1,6 +1,7 @@
 import React from 'react';
 import {
    Route,
+   BrowserRouter,
    Redirect,
    Switch,
    Link,
@@ -19,7 +20,6 @@ export default () => (
       <ProtectedRoute path='/home' component={QuestionIndexContainer} /> 
       <ProtectedRoute path='/questions' component={NavBarContainer} />
       <ProtectedRoute exact path='/questions/:questionId' component={QuestionShowContainer} />
-
    </div>
 )
 

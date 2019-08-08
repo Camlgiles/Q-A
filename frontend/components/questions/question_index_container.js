@@ -5,9 +5,7 @@ import QuestionIndex from './question_index';
 
 const mstp = state => {
    // debugger
-   // console.log(state.entities);
    return ({
-      // banana: {state},
       questions: Object.values(state.entities.questions),
       currentUser: state.session.currentUser,
       answers: Object.values(state.entities.answers)

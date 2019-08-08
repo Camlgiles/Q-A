@@ -11,7 +11,6 @@
 
 class Question < ApplicationRecord
    validates :body, presence: true
-   validates :body, length:{ minimum: 3 }
 
    belongs_to :author, 
       foreign_key: :author_id,
