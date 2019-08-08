@@ -17,11 +17,13 @@ export default () => {
    // debugger
    return(
    <div>
+      <div className='initial-div'>
          <ProtectedRoute path='/home' component={NavBarContainer} />
          <ProtectedRoute path='/home' component={QuestionIndexContainer} /> 
          <ProtectedRoute path='/questions' component={NavBarContainer} />
-      <Switch>
          <ProtectedRoute exact path='/questions/:questionId' component={QuestionShowContainer} />
+      </div>
+      <Switch>
          <AuthRoute exact path='/' component={sessionForm} />
       </Switch>
    </div>

@@ -27,6 +27,12 @@ class QuestionIndex extends React.Component {
 
    handleSubmit(e) {
       e.preventDefault();
+      document.getElementById("ask-question-form").onkeypress = function (e) {
+         var key = e.charCode || e.keyCode || 0;
+         if (key == 13) {
+            e.preventDefault();
+         }
+      }
       this.props.createQuestion(this.state);
    }
 
@@ -42,16 +48,19 @@ class QuestionIndex extends React.Component {
             answersObj={answers}
          />
       ))
-      // debugger
+
+
       return (
          <div>
                <div className="ask-question">
-                  <form>
+                  <form id="ask-question-form">
                      <Link className="ask-question-username" to='/'>{this.props.currentUser.username}</Link>
                      <br/>
-                     <input 
-                        onChange={this.handleInput('body')} className="ask-question-input" 
-                        type="text" placeholder="Ask a question"
+                     <input
+                        onChange={this.handleInput('body')} 
+                        className="ask-question-input" 
+                        type="text" 
+                        placeholder="Ask a question"
                      />
                      <button 
                         onClick={this.handleSubmit} 
