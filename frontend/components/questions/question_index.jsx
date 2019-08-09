@@ -69,7 +69,7 @@ class QuestionIndex extends React.Component {
                      </button>
                   </form>  
                </div>
-            <ul>
+            <ul className="question-index-ul">
                {questions}
             </ul>
          </div>
