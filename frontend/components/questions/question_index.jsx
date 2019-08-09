@@ -33,6 +33,7 @@ class QuestionIndex extends React.Component {
             e.preventDefault();
          }
       }
+      document.getElementById('elementId').value = '';
       this.props.createQuestion(this.state);
    }
 
@@ -61,10 +62,12 @@ class QuestionIndex extends React.Component {
                         className="ask-question-input" 
                         type="text" 
                         placeholder="Ask a question"
+                        id="elementId"
                      />
                      <button 
                         onClick={this.handleSubmit} 
-                        className="ask-question-btn">
+                        className="ask-question-btn"
+                     >
                         Post Question
                      </button>
                   </form>  

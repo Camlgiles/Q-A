@@ -28,6 +28,7 @@ class QuestionShow extends React.Component {
          author_id: this.state.author_id,
          question_id: this.props.question.id
       });
+      document.getElementById('elementId').value = '';
    }
 
 
@@ -76,7 +77,13 @@ class QuestionShow extends React.Component {
                <br />
                { this.state.showResults ? 
                   <form>
-                     <textarea onChange={this.handleInput('body')} type="text" className='answer-input' placeholder='Answer goes here..'/>
+                     <textarea 
+                        onChange={this.handleInput('body')} 
+                        type="text" 
+                        className='answer-input' 
+                        id='elementId'
+                        placeholder='Answer goes here..'
+                     />
                      <br/>
                      <button onClick={this.handleSubmit}>Submit Answer</button>
                   </form> 
