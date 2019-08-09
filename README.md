@@ -1,3 +1,25 @@
 # README
 
-Quora Clone
+# Q&A
+
+Q&A is a question and answer forum inspired by Quora. Q&A allows users to ask questions on an open forum where other users can then answer their questions. Q&A was built with a Ruby on Rails backend, a PostgreSQL database, and React with a Redux framework on the frontend.
+
+
+# Features
+
+* New account creation, login, and demo login
+* Ability to ask questions
+* Ability to answer questions
+
+# Security
+ 
+Q&A was built with user security in mind. Passwords are never stored, instead they are secured through BCrypt. Users will have a password_digest upon account creation and a session_token upon login.
+
+
+# Timeline
+
+* Q&A was built within two weeks
+* Future upgrades and changes will be added to the site
+   * Comment Functionality
+   * Updated Profile information(including current profession)
+   * Upgraded textbox that will allow photos to be included inside of text
