@@ -1,8 +1,8 @@
-# README
-
-# Q&A
+# [Q&A](https://q-and-a-clone.herokuapp.com/)
 
 Q&A is a question and answer forum inspired by Quora. Q&A allows users to ask questions on an open forum where other users can then answer their questions. Q&A was built with a Ruby on Rails backend, a PostgreSQL database, and React with a Redux framework on the frontend.
+
+https://q-and-a-clone.herokuapp.com/
 
 
 # Features
