@@ -46,11 +46,21 @@ class QuestionShow extends React.Component {
    }
 
    render() {
+    //  debugger
       if (!this.props.question) {
          return <div></div>
       };
       let answers;
-      if (this.props.answers) {
+      // debugger
+      if (this.props.answers.length === 0) {   
+        answers = 
+          <p 
+            className='answer answer-body'
+          >
+            Be the first to answer!
+          </p>
+      }
+      if (this.props.answers.length > 0) {
          answers = this.props.answers.map(answer => {
             if (answer.question_id === this.props.question.id) {
                return (
@@ -65,12 +75,26 @@ class QuestionShow extends React.Component {
             }
          })
       }
+     let dateStamp = new Date(this.props.question.created_at);
+     const monthNames = ["January", "February", "March", "April", "May", "June",
+       "July", "August", "September", "October", "November", "December"
+     ];
+     let formattedDate = `${monthNames[dateStamp.getMonth()]} ${dateStamp.getDate()}, ${dateStamp.getFullYear()}`;
+
+
+
+
+
+
+
+
       // debugger
       return (
          <ul className="question-index-ul">
             <li className="questions-index">
                <h1 className="questions-index-links">{this.props.question.body}</h1>
                <h2 className="questions-index-author">{this.props.question.author}</h2>
+               <p>{formattedDate}</p>
                <div className='questions-index-border'></div>
                <br />
                {answers}

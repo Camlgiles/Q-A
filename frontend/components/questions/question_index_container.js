@@ -6,7 +6,7 @@ import QuestionIndex from './question_index';
 const mstp = state => {
    // debugger
    return ({
-      questions: Object.values(state.entities.questions),
+      questions: Object.values(state.entities.questions).reverse(),
       currentUser: state.session.currentUser,
       answers: Object.values(state.entities.answers)
    })

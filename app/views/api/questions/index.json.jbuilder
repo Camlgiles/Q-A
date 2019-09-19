@@ -4,8 +4,9 @@
 
 json.questions do
    @questions.each do |question| 
+    
       json.set! question.id do
-         json.extract! question, :id, :body, :author_id
+         json.extract! question, :id, :body, :author_id, :created_at
 
          json.author question.author.username
          json.answerIds question.answer_ids
