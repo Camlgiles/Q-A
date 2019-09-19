@@ -23,3 +23,9 @@ Q&A was built with user security in mind. Passwords are never stored, instead th
    * Comment Functionality
    * Updated Profile information(including current profession)
    * Upgraded textbox that will allow photos to be included inside of text
+
+
+# TO get program to run
+
+* npm run webpack
+* rails s
