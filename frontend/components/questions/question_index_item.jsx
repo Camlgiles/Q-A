@@ -11,6 +11,12 @@ export const QuestionIndexItem = ({ question, answersObj, date  }) => {
    if (answersObj && question.answerIds.length > 0) {
       answers = answersObj.map(answer => {
          if (answer.question_id === question.id) {
+          //  debugger
+           let dateStamp = new Date(answer.created_at);
+           const monthNames = ["January", "February", "March", "April", "May", "June",
+             "July", "August", "September", "October", "November", "December"
+           ];
+           let formattedDate = `${monthNames[dateStamp.getMonth()]} ${dateStamp.getDate()}, ${dateStamp.getFullYear()}`;
             return (
                <div 
                   className='answer'
@@ -18,6 +24,7 @@ export const QuestionIndexItem = ({ question, answersObj, date  }) => {
                >
                <div className='answer-body'>{answer.body}</div>
                <div className='answer-author'>{answer.author}</div>
+               <div className='answer-date'>{formattedDate}</div>
                </div>
             )
          }

@@ -42,9 +42,8 @@ class QuestionIndex extends React.Component {
       // debugger
       let answers = this.props.answers;
 
-      let reversedQuestions = this.props.questions;
 
-      let questions = reversedQuestions.map((question, i) => {
+      let questions = this.props.questions.map((question, i) => {
         // debugger
         return (
          <QuestionIndexItem 
