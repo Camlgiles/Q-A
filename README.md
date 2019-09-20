@@ -25,7 +25,3 @@ Q&A was built with user security in mind. Passwords are never stored, instead th
    * Upgraded textbox that will allow photos to be included inside of text
 
 
-# TO get program to run
-
-* npm run webpack
-* rails s
