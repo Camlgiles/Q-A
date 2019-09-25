@@ -82,7 +82,6 @@ class QuestionIndex extends React.Component {
          </div>
       );
    }
-
 }
 
 
