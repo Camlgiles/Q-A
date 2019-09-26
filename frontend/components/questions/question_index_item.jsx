@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 export const QuestionIndexItem = ({ question, answersObj, date  }) => {
   //  debugger
    let answers;
-   if (answersObj && question.answerIds.length > 0) {
+   if (answersObj && question.answerIds) {
       answers = answersObj.map(answer => {
          if (answer.question_id === question.id) {
           //  debugger
@@ -30,7 +30,7 @@ export const QuestionIndexItem = ({ question, answersObj, date  }) => {
          }
       })
    }
-  if (question.answerIds.length === 0) {
+  if (!question.answerIds) {
     answers =
       <p
         className='answer answer-body'
