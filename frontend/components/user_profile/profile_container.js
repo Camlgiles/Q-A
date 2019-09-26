@@ -1,6 +1,10 @@
 import Profile from "./profile";
 import { connect } from "react-redux";
-import { logoutUser } from "../../actions/session";
+import {
+  requestQuestions,
+  deleteQuestion,
+  createQuestion
+} from "../../actions/questions";
 
 const mstp = state => ({
   questions: Object.values(state.entities.questions).reverse(),

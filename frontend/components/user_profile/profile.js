@@ -9,9 +9,10 @@ class Profile extends React.Component {
     // console.log(this.props);
     this.state = {
       body: "",
-      author: this.props.currentUser.id
+      author: this.props.currentUser.id,
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    // this.author = this.author.bind(this);
   }
 
   componentDidMount() {
@@ -52,6 +53,19 @@ class Profile extends React.Component {
         />
       );
     });
+    // debugger
+    let authorIdNum = this.state.author
+    let usersQuestions = questions.map((question, i) => {
+      // debugger
+
+      if (question.props.question.author_id === authorIdNum) {
+        return (
+          question
+        )
+      }
+      
+      return;
+    })
 
     return (
       <div>
@@ -73,7 +87,7 @@ class Profile extends React.Component {
             </button>
           </form>
         </div>
-        <ul className="question-index-ul">{questions}</ul>
+        <ul className="question-index-ul">{usersQuestions}</ul>
       </div>
     );
   }

@@ -19,9 +19,9 @@ export default () => {
    return(
    <div>
       <div className='initial-div'>
-         <ProtectedRoute path='/home' component={NavBarContainer} />
+         <ProtectedRoute path='/' component={NavBarContainer} />
          <ProtectedRoute path='/home' component={QuestionIndexContainer} /> 
-         <ProtectedRoute path='/questions' component={NavBarContainer} />
+         {/* <ProtectedRoute path='/questions' component={NavBarContainer} /> */}
          <ProtectedRoute exact path='/questions/:questionId' component={QuestionShowContainer} />
          <ProtectedRoute exact path='/user-profile' component={ProfileContainer} />
       </div>
