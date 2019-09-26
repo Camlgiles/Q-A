@@ -44,6 +44,7 @@
 
 .nav-profile {
    cursor: pointer;
+   text-decoration: none;
    display: inline-block;
    margin: 0px 15px 0px 0px;
    padding: 23px 20px 14px 10px;
@@ -61,7 +62,7 @@
    background-color: #b92b27;
    color: white;
    font-weight: 600;
-   border-radius: 3px;
-   padding: 4px 14px;
+   border-radius: 4px;
+   padding: 5px 14px;
    font-size: 13px;
 }

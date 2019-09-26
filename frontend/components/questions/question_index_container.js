@@ -13,11 +13,12 @@ const mstp = state => {
 }
 
 const mdtp = dispatch => {
-   return ({
-      createQuestion: (question) => dispatch(createQuestion(question)),
-      requestQuestions: () => dispatch(requestQuestions()),
-      deleteQuestion: (id) => dispatch(deleteQuestion(id))
-   })
+   return {
+     createQuestion: question => dispatch(createQuestion(question)),
+     requestQuestions: () => dispatch(requestQuestions()),
+     deleteQuestion: id => dispatch(deleteQuestion(id)),
+     createAnswer: answer => dispatch(createAnswer(answer))
+   };
 }
 
 export default connect(mstp, mdtp)(QuestionIndex);

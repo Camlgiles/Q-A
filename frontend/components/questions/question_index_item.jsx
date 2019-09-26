@@ -30,7 +30,8 @@ export const QuestionIndexItem = ({ question, answersObj, date  }) => {
          }
       })
    }
-  if (!question.answerIds) {
+  //  debugger
+  if (answers && answers[0] === undefined) {
     answers =
       <p
         className='answer answer-body'

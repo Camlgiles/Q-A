@@ -17,6 +17,7 @@ class QuestionShow extends React.Component {
    }
 
    componentDidMount() {
+    //  debugger
       this.props.requestQuestion(this.props.match.params.questionId)
    }
 
@@ -51,30 +52,48 @@ class QuestionShow extends React.Component {
          return <div></div>
       };
       let answers;
-      // debugger
-      if (this.props.answers.length === 0) {   
+      let hasAnswers = this.props.question.answerIds;
+      debugger
+      if (!hasAnswers || hasAnswers.length === 0) {   
         answers = 
-          <p 
-            className='answer answer-body'
-          >
+        <p 
+        className='answer answer-body'
+        >
             Be the first to answer!
           </p>
+      } else {
+        answers = this.props.answers.map(answer => {
+          // debugger
+          if (answer.question_id === this.props.question.id) {
+            return (
+              <div
+                className='answer'
+                key={answer.id}
+              >
+                <div className='answer-body'>{answer.body}</div>
+                <div className='answer-author'>{answer.author}</div>
+              </div>
+            )
+          }
+        })
       }
-      if (this.props.answers.length > 0) {
-         answers = this.props.answers.map(answer => {
-            if (answer.question_id === this.props.question.id) {
-               return (
-                  <div
-                     className='answer'
-                     key={answer.id}
-                  >
-                     <div className='answer-body'>{answer.body}</div>
-                     <div className='answer-author'>{answer.author}</div>
-                  </div>
-               )
-            }
-         })
-      }
+      // debugger
+      // if (hasAnswers !== [] && hasAnswers !== undefined && hasAnswers) {
+      //   answers = this.props.answers.map(answer => {
+      //     // debugger
+      //       if (answer.question_id === this.props.question.id) {
+      //          return (
+      //             <div
+      //                className='answer'
+      //                key={answer.id}
+      //             >
+      //                <div className='answer-body'>{answer.body}</div>
+      //                <div className='answer-author'>{answer.author}</div>
+      //             </div>
+      //          )
+      //       }
+      //    })
+      // }
      let dateStamp = new Date(this.props.question.created_at);
      const monthNames = ["January", "February", "March", "April", "May", "June",
        "July", "August", "September", "October", "November", "December"
