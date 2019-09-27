@@ -7,8 +7,8 @@ class QuestionShow extends React.Component {
       super(props);
       // debugger
       this.state = { 
-         showResults: false,
-         answerThisQuesiton: true, 
+        showResults: false,
+         answerThisQuestion: true, 
          body:"", 
          author_id: this.props.currentUser.id
       };
@@ -43,7 +43,7 @@ class QuestionShow extends React.Component {
    createTextbox() {
       // debugger
       this.state.showResults ? this.setState({showResults:false}) : this.setState({showResults: true});
-      this.state.answerThisQuesiton ? this.setState({answerThisQuesiton: false}) : this.setState({answerThisQuesiton: true});
+      this.state.answerThisQuestion ? this.setState({answerThisQuestion: false}) : this.setState({answerThisQuestion: true});
    }
 
    render() {
@@ -132,7 +132,7 @@ class QuestionShow extends React.Component {
                   </form> 
                   : '' 
                }
-               <button onClick={this.createTextbox} className='create-answer-link'>{this.state.answerThisQuesiton ? 'Answer this question' : 'Cancel'}</button>
+               <button onClick={this.createTextbox} className='create-answer-link'>{this.state.answerThisQuestion ? 'Answer this question' : 'Cancel'}</button>
             </li>
          </ul>
       )

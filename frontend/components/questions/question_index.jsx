@@ -9,10 +9,13 @@ class QuestionIndex extends React.Component {
       // debugger
       // console.log(this.props);
       this.state = {
+         showResults: false,
+         answerThisQuestion: true,
          body:"",
          author: this.props.currentUser.id,
       }
       this.handleSubmit = this.handleSubmit.bind(this);
+    //  this.createTextbox = this.createTextbox.bind(this);
    }
 
    componentDidMount() {
