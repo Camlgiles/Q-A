@@ -9,9 +9,12 @@ https://q-and-a-clone.herokuapp.com/
 - React
 - Redux
 - Rails
+- jBuilder
 - PostgreSQL
 - JavaScript
 - Ruby
+
+![homepage](https://github.com/Camlgiles/Q-A/blob/master/readMe_images/homepage.png)
 
 
 # Features
