@@ -4,6 +4,15 @@ Q&A is a question and answer forum inspired by Quora. Q&A allows users to ask qu
 
 https://q-and-a-clone.herokuapp.com/
 
+# Technology Used
+
+- React
+- Redux
+- Rails
+- PostgreSQL
+- JavaScript
+- Ruby
+
 
 # Features
 
