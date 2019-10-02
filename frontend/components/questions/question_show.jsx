@@ -1,11 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-// import QuestionShowResponse from './question_show_response';
 
 class QuestionShow extends React.Component {
    constructor(props) {
       super(props);
-      // debugger
       this.state = { 
         showResults: false,
          answerThisQuestion: true, 
@@ -17,12 +14,10 @@ class QuestionShow extends React.Component {
    }
 
    componentDidMount() {
-    //  debugger
       this.props.requestQuestion(this.props.match.params.questionId)
    }
 
    handleSubmit(e) {
-      // debugger
       e.preventDefault();
       this.props.createAnswer({
          body: this.state.body,
