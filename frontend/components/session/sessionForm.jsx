@@ -5,7 +5,7 @@ import {connect} from 'react-redux';
 
 
 const mstp = (state) => {
-   // debugger
+     
    return {
       errors: state.sessionErrors
    }
@@ -16,7 +16,7 @@ const mstp = (state) => {
 
 
 const SessionForm = ({errors}) => {
-   // debugger
+     
 
    const err = errors.map((error, i) => (
          <li key={`error-${i}`}>

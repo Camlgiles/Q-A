@@ -15,7 +15,7 @@ import QuestionShowContainer from './questions/question_show_container';
 import ProfileContainer from './user_profile/profile_container';
 
 export default () => {
-   // debugger
+     
    return(
    <div>
       <div className='initial-div'>

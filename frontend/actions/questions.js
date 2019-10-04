@@ -5,7 +5,7 @@ export const RECEIVE_QUESTION = 'RECEIVE_QUESTION';
 export const REMOVE_QUESTION = 'REMOVE_QUESTION';
 
 const receiveQuestions = (payload) => {
-   // debugger 
+      
    return ({
    questions: payload.questions,
    answers: payload.answers,

@@ -7,7 +7,7 @@ import merge from 'lodash/merge';
 
 
 const questionsReducer = (state = {}, action) => {
-   // debugger
+     
    Object.freeze(state);
    let newState;
    switch (action.type) {

@@ -5,7 +5,7 @@ import QuestionShow from './question_show.jsx';
 
 
 const mstp = (state, ownProps) => {
-   // debugger
+     
    let question = state.entities.questions[ownProps.match.params.questionId];
    return ({
       question: question,

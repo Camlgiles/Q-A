@@ -4,7 +4,9 @@
    justify-content: center;
    background:  white;
    border-bottom: 1px solid lightgrey;
-   // width: 700px;
+   position: fixed;
+   width: 100vw;
+   margin-top: -30px;
 }
 
 .nav-bar-logged-out {
@@ -17,10 +19,11 @@
 }
 
 .logo {
-   color: #b92b27;
+   color: #b92b27 !important;
    padding: 0px 20px;
    margin: 14px 0px 5px 0px;
    font-size: 24px;
+   padding-bottom: 12px !important;
 }
 
 .fas {
@@ -36,6 +39,7 @@
    background-color: white;
    padding: 23px 20px 14px 20px;
    text-decoration: none;
+   display: inline;
 }
 
 .btn:hover {

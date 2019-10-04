@@ -4,7 +4,7 @@ import Login from './login';
 
 
 const mstp = (state) => {
-   // debugger
+     
    return {
       errors: state.sessionErrors
    }

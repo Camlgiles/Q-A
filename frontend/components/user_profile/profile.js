@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 class Profile extends React.Component {
   constructor(props) {
     super(props);
-    // debugger
+      
     // console.log(this.props);
     this.state = {
       body: "",
@@ -39,11 +39,11 @@ class Profile extends React.Component {
 
   render() {
     // console.log(this.props);
-    // debugger
+      
     let answers = this.props.answers;
 
     let questions = this.props.questions.map((question, i) => {
-      // debugger
+        
       return (
         <QuestionIndexItem
           key={`${question.id}`}
@@ -53,10 +53,10 @@ class Profile extends React.Component {
         />
       );
     });
-    // debugger
+      
     let authorIdNum = this.state.author
     let usersQuestions = questions.map((question, i) => {
-      // debugger
+        
 
       if (question.props.question.author_id === authorIdNum) {
         return (

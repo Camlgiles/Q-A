@@ -2,16 +2,16 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 // createTextbox = () => {
-//    debugger
+//      
 // }
 
 export const QuestionIndexItem = ({ question, answersObj, date  }) => {
-  //  debugger
+  //    
    let answers;
    if (answersObj && question.answerIds) {
       answers = answersObj.map(answer => {
          if (answer.question_id === question.id) {
-          //  debugger
+          //    
            let dateStamp = new Date(answer.created_at);
            const monthNames = ["January", "February", "March", "April", "May", "June",
              "July", "August", "September", "October", "November", "December"
@@ -30,7 +30,7 @@ export const QuestionIndexItem = ({ question, answersObj, date  }) => {
          }
       })
    }
-  //  debugger
+  //    
   if (answers && answers[0] === undefined) {
     answers =
       <p

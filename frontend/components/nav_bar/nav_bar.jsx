@@ -5,6 +5,7 @@ export default ({ currentUser, logoutUser }) => {
    const display = currentUser ? 
    (
       <div className='nav-buttons'>
+         <h1 className='logo btn'>Q&amp;A</h1>
           <Link className='btn' to='/home'><i className="fas fa-newspaper"></i> Home</Link>
           <Link className='btn' to='/home'><i className="far fa-edit"></i> Answer</Link>
           <Link className='btn' to='/home'><i className="fas fa-users"></i> Spaces</Link>
@@ -26,7 +27,6 @@ export default ({ currentUser, logoutUser }) => {
    
    return (
       <header className='nav-bar'>
-         <h1 className='logo'>Q&amp;A</h1>
          <div>
             {display}
          </div>

@@ -36,19 +36,19 @@ class QuestionShow extends React.Component {
    }
 
    createTextbox() {
-      // debugger
+        
       this.state.showResults ? this.setState({showResults:false}) : this.setState({showResults: true});
       this.state.answerThisQuestion ? this.setState({answerThisQuestion: false}) : this.setState({answerThisQuestion: true});
    }
 
    render() {
-    //  debugger
+    //    
       if (!this.props.question) {
          return <div></div>
       };
       let answers;
       let hasAnswers = this.props.question.answerIds;
-      debugger
+        
       if (!hasAnswers || hasAnswers.length === 0) {   
         answers = 
         <p 
@@ -58,7 +58,7 @@ class QuestionShow extends React.Component {
           </p>
       } else {
         answers = this.props.answers.map(answer => {
-          // debugger
+            
           if (answer.question_id === this.props.question.id) {
             return (
               <div
@@ -72,10 +72,10 @@ class QuestionShow extends React.Component {
           }
         })
       }
-      // debugger
+        
       // if (hasAnswers !== [] && hasAnswers !== undefined && hasAnswers) {
       //   answers = this.props.answers.map(answer => {
-      //     // debugger
+      //       
       //       if (answer.question_id === this.props.question.id) {
       //          return (
       //             <div
@@ -102,7 +102,7 @@ class QuestionShow extends React.Component {
 
 
 
-      // debugger
+        
       return (
          <ul className="question-index-ul">
             <li className="questions-index">

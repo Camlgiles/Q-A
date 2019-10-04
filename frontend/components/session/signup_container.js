@@ -4,7 +4,7 @@ import Signup from './signup';
 
 
 const mstp = (state) => {
-   // debugger
+     
    return {
       errors: state.sessionErrors
    }
