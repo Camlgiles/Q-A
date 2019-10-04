@@ -105,7 +105,7 @@ class QuestionShow extends React.Component {
         
       return (
          <ul className="question-index-ul">
-            <li className="questions-index">
+            <li className="questions-index questions-index-show">
                <h1 className="questions-index-links">{this.props.question.body}</h1>
                <h2 className="questions-index-author">{this.props.question.author}</h2>
                <p>{formattedDate}</p>

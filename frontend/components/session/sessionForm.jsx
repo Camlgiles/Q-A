@@ -19,7 +19,7 @@ const SessionForm = ({errors}) => {
      
 
    const err = errors.map((error, i) => (
-         <li key={`error-${i}`}>
+         <li key={`error-${i}`} className='sesh-errors'>
             {error}
          </li>
    ))
