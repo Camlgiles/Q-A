@@ -23,11 +23,13 @@ https://q-and-a-clone.herokuapp.com/
 * Ability to ask questions
 * Ability to answer questions
 
-![user](https://github.com/Camlgiles/Q-A/blob/master/readMe_images/user.png)
-
 # Security
  
 Q&A was built with user security in mind. Passwords are never stored, instead they are secured through BCrypt. Users will have a password_digest upon account creation and a session_token upon login.
+
+![user](https://github.com/Camlgiles/Q-A/blob/master/readMe_images/user.png)
+
+
 
 ![questions](https://github.com/Camlgiles/Q-A/blob/master/readMe_images/questionshow1.png)
 
