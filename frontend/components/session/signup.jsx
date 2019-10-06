@@ -39,7 +39,7 @@ class Signup extends React.Component {
          <div className="session-form">
             <div className="signup-form">
                <p className="sessionForm-text">Sign Up</p>
-               <form>
+               <form className="signup-form-border">
                   <label> 
                      <input 
                         type="text" 
