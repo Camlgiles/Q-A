@@ -80,6 +80,7 @@ class QuestionIndex extends React.Component {
                   </form>  
                </div>
             <ul className="question-index-ul">
+            <h1 className="header-title">Recent Questions</h1>
                {questions}
             </ul>
          </div>

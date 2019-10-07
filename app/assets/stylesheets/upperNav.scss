@@ -9,6 +9,10 @@
    margin-top: -72px;
 }
 
+.break-right{
+
+}
+
 .nav-bar-logged-out {
    margin: 14px 0px;
 }
@@ -40,6 +44,7 @@
    padding: 23px 20px 14px 20px;
    text-decoration: none;
    display: inline;
+   margin-left: -13px;
 }
 
 .btn:hover {
@@ -69,4 +74,12 @@
    border-radius: 4px;
    padding: 5px 14px;
    font-size: 13px;
+}
+.btn-no-hover{
+  padding-right: 37vw;
+}
+
+.btn-no-hover:hover{
+  background-color: white;
+  cursor: default;
 }

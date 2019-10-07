@@ -87,6 +87,7 @@ class Profile extends React.Component {
             </button>
           </form>
         </div>
+        <h1 className="header-title">My Questions</h1>
         <ul className="question-index-ul">{usersQuestions}</ul>
       </div>
     );
