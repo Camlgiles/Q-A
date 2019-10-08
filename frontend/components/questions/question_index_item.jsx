@@ -31,14 +31,14 @@ export const QuestionIndexItem = ({ question, answersObj, date  }) => {
       })
    }
   //    
-  if (answers && answers[0] === undefined) {
-    answers =
-      <p
-        className='answer answer-body'
-      >
-        Be the first to answer!
-          </p>
-  }
+  // if (answers && answers[0] === undefined) {
+  //   answers =
+  //     <p
+  //       className='answer answer-body'
+  //     >
+  //       Be the first to answer!
+  //         </p>
+  // }
 
   let dateStamp = new Date(date);
   const monthNames = ["January", "February", "March", "April", "May", "June",

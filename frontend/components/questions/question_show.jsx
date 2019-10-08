@@ -49,17 +49,38 @@ class QuestionShow extends React.Component {
       let answers;
       let hasAnswers = this.props.question.answerIds;
         
-      if (!hasAnswers || hasAnswers.length === 0) {   
-        answers = 
-        <p 
-        className='answer answer-body'
-        >
-            Be the first to answer!
-          </p>
-      } else {
-        answers = this.props.answers.map(answer => {
+      // if (!hasAnswers || hasAnswers.length === 0) {   
+      //   answers = 
+      //   <p 
+      //   className='answer answer-body'
+      //   >
+      //       Be the first to answer!
+      //     </p>
+      // } else {
+      //   answers = this.props.answers.map(answer => {
             
+      //     if (answer.question_id === this.props.question.id) {
+      //       return (
+      //         <div
+      //           className='answer'
+      //           key={answer.id}
+      //         >
+      //           <div className='answer-body'>{answer.body}</div>
+      //           <div className='answer-author'>{answer.author}</div>
+      //         </div>
+      //       )
+      //     }
+      //   })
+      // }
+
+          answers = this.props.answers.map(answer => {
+
           if (answer.question_id === this.props.question.id) {
+            let dateStamp = new Date(answer.created_at);
+            const monthNames = ["January", "February", "March", "April", "May", "June",
+              "July", "August", "September", "October", "November", "December"
+            ];
+            let formattedDate = `${monthNames[dateStamp.getMonth()]} ${dateStamp.getDate()}, ${dateStamp.getFullYear()}`;
             return (
               <div
                 className='answer'
@@ -67,11 +88,11 @@ class QuestionShow extends React.Component {
               >
                 <div className='answer-body'>{answer.body}</div>
                 <div className='answer-author'>{answer.author}</div>
+                <div className='answer-date'>{formattedDate}</div>
               </div>
             )
           }
         })
-      }
         
       // if (hasAnswers !== [] && hasAnswers !== undefined && hasAnswers) {
       //   answers = this.props.answers.map(answer => {
